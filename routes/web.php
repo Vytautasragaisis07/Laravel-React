@@ -17,6 +17,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/main', 'HomeController@main');
-Route::get('/addcat', 'HomeController@showCategory');
+Route::get('/home', 'HomeController@Main');
+
+Route::get('/addcat', 'CategoryController@ShowCategory');
+Route::post('/storecat', 'CategoryController@StoreCategory'); //uzklausa
+Route::get('/allcat', 'CategoryController@AllCategories');
+Route::get('/delcat/{category}', 'CategoryController@DeleteCategory');
+
+Route::get('/adproducts', 'ProductController@DeleteCategory');
+Route::post('/storeproduct', 'ProductController@StoreProduct'); //uzklausa
+Route::get('/allproducts', 'ProductController@AllProducts');
