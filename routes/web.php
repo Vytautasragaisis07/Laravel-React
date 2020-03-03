@@ -24,6 +24,6 @@ Route::post('/storecat', 'CategoryController@StoreCategory'); //uzklausa
 Route::get('/allcat', 'CategoryController@AllCategories');
 Route::get('/delcat/{category}', 'CategoryController@DeleteCategory');
 
-Route::get('/adproducts', 'ProductController@DeleteCategory');
+Route::get('/adproduct', 'ProductController@AdProduct');
 Route::post('/storeproduct', 'ProductController@StoreProduct'); //uzklausa
 Route::get('/allproducts', 'ProductController@AllProducts');

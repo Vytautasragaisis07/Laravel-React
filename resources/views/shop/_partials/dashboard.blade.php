@@ -37,15 +37,15 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="add-new-post.html">
+                <a class="nav-link " href="/adproduct">
                     <i class="material-icons">note_add</i>
-                    <span>Add New Post</span>
+                    <span>Pridėti skelbimą</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="form-components.html">
+                <a class="nav-link " href="/allproducts">
                     <i class="material-icons">view_module</i>
-                    <span>Forms &amp; Components</span>
+                    <span>Visi Produktai</span>
                 </a>
             </li>
             <li class="nav-item">

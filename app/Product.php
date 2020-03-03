@@ -9,7 +9,7 @@
 namespace App;
 
 
-class Products
+class Product
 {
-    protected $fillable = ['title', 'description', 'quantity', 'price', 'img', 'catid', 'userid'];
+    protected $fillable = ['title', 'description', 'quantity', 'price', 'catid', 'img',  'userid'];
 }

@@ -7,30 +7,31 @@
  */
 
 namespace App\Http\Controllers;
+use App\Product;
 use App\Category;
-use App\Products;
 use File;
+use Gate;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class ProductController
 {
-    public function ShowProduct(){
+    public function AdProduct(){
         $categories = Category::all();
-        return view('shop.pages.showproduct', compact('categories'));
+        return view('shop.pages.adproduct', compact('categories'));
     }
     public function StoreProduct(Request $request){
         $validateData = $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'quantity' => 'quantity',
+            'quantity' => 'required',
             'price' => 'required',
             'img' => 'mimes:jpeg,jpg,png,gif|required|max:10000'
         ]);
         $path=$request->file('img')->store('public/logos');
         $filename=str_replace('public/',"", $path);
 
-        $products = Products::create([
+        $products = Product::create([
             'title' => request('title'),
             'description' => request('description'),
             'quantity' => request('quantity'),
@@ -44,8 +45,8 @@ class ProductController
     }
     public function AllProducts()
     {
-        $products = Products::all();
+        $products = Product::all();
         $categories = Category::all();
-        return view('shop.pages.allproducts', compact('products'));
+        return view('shop.pages.allproducts', compact('product'));
     }
 }
